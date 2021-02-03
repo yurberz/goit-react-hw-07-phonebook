@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "name": "Rosie Simpson",
+      "number": "456-34-56",
+      "id": 1
+    },
+    {
+      "name": "Testa Testovna",
+      "number": "123-23-45",
+      "id": 2
+    },
+    {
+      "name": "Test Testovich",
+      "number": "459-12-56",
+      "id": 3
+    }
+  ]
+}
