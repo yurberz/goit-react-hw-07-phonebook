@@ -14,8 +14,15 @@ const Container = styled.div`
     position: absolute;
     left: 10%;
     top: 0;
-    color: honeydew;
+    color: royalblue;
     font-size: 18px;
+  }
+
+  .error {
+    color: salmon;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: oblique;
   }
 
   .h1Title {

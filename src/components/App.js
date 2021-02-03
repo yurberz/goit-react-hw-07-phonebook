@@ -29,7 +29,6 @@ class App extends Component {
         </CSSTransition>
 
         <ContactForm />
-
         <h2 className="h2Title">Contacts</h2>
 
         <CSSTransition
@@ -41,11 +40,17 @@ class App extends Component {
           <Filter />
         </CSSTransition>
 
-        <ContactList />
+        {!this.props.isError && <ContactList />}
 
-        {!this.props.isLoadingContacts && !this.props.contacts.length && (
-          <p className="text">Your phonebook is empty. Please add contact.</p>
+        {this.props.isError && (
+          <p className="error">ERR! Something went wrong...</p>
         )}
+
+        {!this.props.isLoadingContacts &&
+          !this.props.isError &&
+          !this.props.contacts.length && (
+            <p className="text">Your phonebook is empty. Please add contact.</p>
+          )}
       </Container>
     );
   }
@@ -55,6 +60,7 @@ const mSTP = (state) => {
   return {
     contacts: contactsSelectors.getContacts(state),
     isLoadingContacts: contactsSelectors.getLoading(state),
+    isError: contactsSelectors.getError(state),
   };
 };
 

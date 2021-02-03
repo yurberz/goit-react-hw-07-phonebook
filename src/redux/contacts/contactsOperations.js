@@ -10,7 +10,7 @@ const getContacts = () => async (dispatch) => {
     const { data } = await axios.get("/contacts");
     dispatch(contactsActions.getContactsSuccess(data));
   } catch (error) {
-    dispatch(contactsActions.getContacstError(error));
+    dispatch(contactsActions.getContactsError(error));
   }
 };
 
