@@ -11,7 +11,7 @@ const addContact = (state, action) => {
 };
 
 const delContact = (state, action) => {
-  return state.filter((contact) => contact.id.toString() !== action.payload);
+  return state.filter((contact) => contact.id !== action.payload);
 };
 
 const items = createReducer([], {
