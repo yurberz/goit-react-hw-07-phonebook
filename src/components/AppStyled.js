@@ -13,9 +13,9 @@ const Container = styled.div`
   .loading {
     position: absolute;
     left: 10%;
-    top: 0;
-    color: royalblue;
-    font-size: 18px;
+    top: 10%;
+    color: orangered;
+    font-size: 21px;
   }
 
   .error {

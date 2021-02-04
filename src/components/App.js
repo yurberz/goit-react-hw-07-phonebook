@@ -42,15 +42,13 @@ class App extends Component {
 
         {!this.props.isError && <ContactList />}
 
-        {this.props.isError && (
+        {!!this.props.contacts.length && this.props.isError && (
           <p className="error">ERR! Something went wrong...</p>
         )}
 
-        {!this.props.isLoadingContacts &&
-          !this.props.isError &&
-          !this.props.contacts.length && (
-            <p className="text">Your phonebook is empty. Please add contact.</p>
-          )}
+        {!this.props.isLoadingContacts && !this.props.contacts.length && (
+          <p className="text">Your phonebook is empty. Please add contact.</p>
+        )}
       </Container>
     );
   }
