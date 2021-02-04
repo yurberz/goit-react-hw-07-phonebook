@@ -25,10 +25,7 @@ class ContactForm extends Component {
     if (
       this.props.contacts.find(
         (contact) => contact.name.toLowerCase() === name.toLowerCase()
-      )
-    ) {
-      this.setState((state) => ({ showByUsedNtf: !state.showByUsedNtf }));
-    } else if (
+      ) ||
       this.props.contacts.find((contact) => contact.number === number)
     ) {
       this.setState((state) => ({ showByUsedNtf: !state.showByUsedNtf }));
